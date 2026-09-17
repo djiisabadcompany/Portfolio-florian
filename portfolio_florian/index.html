@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlorianRasing.com</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="Skills.html">Skills</a>
+        <a href="Pictures.html">Pictures</a>
+    </nav>
+    <script>
+        document.querySelectorAll(".preload-link").forEach(link => {
+            link.addEventListeneer("mouseenter", () => {
+                const preload = document.createElement("link");
+
+                preload.rel = "prefect";
+                preload.href = link.href;
+
+                document.head.appendChild(preload);
+            }, {once: true});
+        });
+    </script>
+</header>
+
+<body>
+    <section>
+        <img class="img1" src="images/image-530.jpg"
+            alt="image of a old 1967 formula 1 ferrari driving around a corner at speeds" width="1450" height="160">
+        <p> Florian
+            driving around the track Spa in a 1967 312 ferrari formula 1 car.</p>
+    </section>
+    <div class="box-container">
+        <section>
+            <h1>
+                Florian
+            </h1>
+            <p>Florian is een gozer uit die rotter en is wollah die boy.</p>
+        </section>
+        <div id="section1">
+            <h1>dit is <br><---Feit </h1>
+        </div id="section1">
+    </div>
+    <section>
+        <img class="banner" src="images/image-116.jpg"
+            alt="image of Florian driving his formula 1 car up to eau rouge in belgium" width="1450" height="160">
+        <p>
+            Florian driving the 312 Ferrari up Eau Rouge in Belgium.
+        </p>
+    </section>
+</body>
+
+</html>

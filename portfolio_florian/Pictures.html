@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pictures</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="Skills.html">Skills</a>
+        <a href="Pictures.html">Pictures</a>
+    </nav>
+    <script>
+        document.querySelectorAll(".preload-link").forEach(link => {
+            link.addEventListeneer("mouseenter", () => {
+                const preload = document.createElement("link");
+
+                preload.rel = "prefect";
+                preload.href = link.href;
+
+                document.head.appendChild(preload);
+            }, {once: true});
+        });
+    </script>
+</header>
+
+<body>
+    <section>
+        <p>This is a slideshow containing 530 images. every 5 seconds itll go to the next one.
+            <br>
+            if you want to see every image it will take 2,650 seconds. or 44.167 minutes
+        </p>
+        <div class="slideshow">
+            <img id="slideshowImage" src="images/image-1.jpg" alt="Slideshow image" width="1800" height="754">
+    </section>
+    </div>
+
+    <script>
+        const image = document.getElementById("slideshowImage");
+        const totalImages = 531;
+
+        function showRandomImage() {
+            const randomNumber = Math.floor(Math.random() * totalImages) + 1;
+            image.src = `images/image-${randomNumber}.jpg`;
+        }
+
+        showRandomImage();
+
+        setInterval(showRandomImage, 5000);
+    </script>
+    <section>
+        <h1>
+            Personal favorite pictures:
+        </h1>
+        <img class="img1" src="images/image-158.jpg" alt="image of florian driving a lotus 49 around the redbull ring"
+            width="1450" height="160">
+        <br> <br>
+        <h2>A 100% real and not photoshopped image of florian driving his shit</h2>
+        <img class="img1" src="images/image-80.jpg" alt="florian goin crazy with his car round the redbull ring on tung"
+            width="1450" height="160">
+        <br> <br>
+        <img class="img1" src="images/image-24.jpg" alt="florian shitting his ass out" width="1450" height="160">
+    </section>
+</body>
+
+</html>

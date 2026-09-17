@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="Skills.html">Skills</a>
+        <a href="Pictures.html">Pictures</a>
+    </nav>
+    <script>
+        document.querySelectorAll(".preload-link").forEach(link => {
+            link.addEventListeneer("mouseenter", () => {
+                const preload = document.createElement("link");
+
+                preload.rel = "prefect";
+                preload.href = link.href;
+
+                document.head.appendChild(preload);
+            }, {once: true});
+        });
+    </script>
+</header>
+
+<body>
+    <div id="div1">
+        <h1>This page contains Skills.</h1>
+    </div>
+    <br>
+    <div id="div1">
+        <p> (my skills btw)</p>
+    </div>
+    <div id="div1">
+        <p>Im a quick learner, quickly picked up html and css with ease and that allowed me to write this website quite
+            fast since the start</p>
+        <p>I like what i do, thats why i do it.</p>
+        <br>
+    </div>
+    <div id="div1">
+        <h2>
+            my interests
+        </h2>
+        <br>
+        <p> im interested in computers and how things work. i love the idea of linking things together to work and
+            do
+            meaningless small tasks. i like to automate the simplest of things like putting my pc to sleep.</p>
+    </div>
+    <section>
+        <h2>
+            putting that shit around the track
+        </h2>
+        <img class="img1" src="images/image-24.jpg" alt="florian shitting his ass out" width="1450" height="160">
+    </section>
+    <div id="section2">
+        <h2>
+            showing off my<br>engineering skills
+        </h2>
+        <img class="img1" src="ymage/temporary-6.jpeg" alt="showing off my engineering skills n shit on tung">
+    </div>
+    <div id="section2">
+        <h2>
+            putting that shit <br>round the track real life too<br> *600ms away from track record*
+        </h2>
+        <img class="img1" src="ymage/temporary-3.jpg" alt="Florian laying down on the ground at his local kart track.">
+    </div>
+    <div id="section2">
+        <h2>
+            eerste dag van school
+        </h2>
+        <img class="img1" src="ymage/temporary-1.jpg" alt="Florian laying down on the ground at his local kart track.">
+    </div>
+    <div id="section2">
+        <h2>
+            appie werk
+        </h2>
+        <img class="img1" src="ymage/temporary-4.jpeg" alt="Florian laying down on the ground at his local kart track.">
+    </div>
+</body>
+
+</html>
