@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hellohi abonnement overzicht</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .row {
+        display: flex;
+    }
+
+    .column {
+        flex: 50%;
+        padding: 1px;
+    }
+
+    section {
+        background-color: rgb(166, 107, 222);
+    }
+
+    .A2 {
+        background-color: blueviolet;
+        padding: 7px;
+    }
+
+    .A3 th {
+        background-color: rgb(0, 0, 0);
+        padding: 5px;
+        color: white;
+    }
+
+    th {
+        background-color: black;
+        color: white
+    }
+
+    .A1 {
+        background-color: rgb(166, 107, 222);
+        padding: 5px;
+    }
+
+    .box {
+        border-radius: 0 0 100px 0;
+    }
+</style>
+
+<body>
+    <div class="row">
+        <table class="column">
+            <div class="section" id="section">
+                <tr class="A1">
+                    <th class="A1">Abonnement</th>
+                    <th class="A1">Snelheid</th>
+                    <th class="A1">Data</th>
+                    <th class="A1">Maandprijs</th>
+                </tr>
+            </div>
+            <br>
+            <div class="A3">
+                <tr>
+                    <th class="A2">basic </th>
+                    <th>300mb/s </th>
+                    <th>2GB </th>
+                    <th>16,50- </th>
+                </tr>
+                <tr>
+                    <th class="A2">Start</th>
+                    <th>300mb/s</th>
+                    <th>10GB</th>
+                    <th>18,00, -</th>
+                </tr>
+                <tr>
+                    <th class="A2">Unlimited</th>
+                    <th>400mb/s</th>
+                    <th>50GB</th>
+                    <th>32,50, -</th>
+                </tr>
+                <tr>
+                    <th class="A2">Unlimited Plus</th>
+                    <th>700mb/s</th>
+                    <th>60GB</th>
+                    <th class="box">37,50, -</th>
+                </tr>
+            </div>
+        </table>
+    </div>
+</body>
+
+</html>
