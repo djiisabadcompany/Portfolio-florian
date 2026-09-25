@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Faster+One&family=Sixtyfour&family=Sixtyfour+Convergence&display=swap"
+        rel="stylesheet">
+</head>
+<header>
+    <nav>
+        <h1>FlorianRasing.com</h1>
+        <img class="logo" src="ymage/temporary-.jpg" alt="logo of website. florians face in a helmet" width="auto"
+            height="160">
+        <a href="index.html">home</a>
+        <a href="Skills.html">skills</a>
+        <a href="Pictures.html">pictures</a>
+        <a class="click" href="aboutme.html">About me</a>
+        <a href="xavi.html">xavi</a>
+    </nav>
+
+    <script>
+        document.querySelectorAll(".preload-link").forEach(link => {
+            link.addEventListeneer("mouseenter", () => {
+                const preload = document.createElement("link");
+
+                preload.rel = "prefect";
+                preload.href = link.href;
+
+                document.head.appendChild(preload);
+            }, {once: true});
+        });
+    </script>
+</header>
+
+<body>
+    <section>
+        <h1>Ik ben florian en ik hou van racing games, youtube kijken en karten</h1>
+    </section>
+    <section>
+        <p> Ik ben geboren in mijn moeders bed op 22 oktober 2010. ik was tijdens de basisschool al
+            geinteresseert in
+            computers en in de eerste kreeg ik mijn vaders computer. uitgerust met een 1080ti en een i7 7700k kon ik
+            zoveel
+            games spelen en heb ik ook dingen met arduino gedaan. </p>
+        <br>
+        <p>
+            toen ben ik geupgrade naar een 7800xt en een r7 7700 cpu en was de computer vanaf start van mij. hiermee ben
+            ik nog mee bezig en ik heb door die computer zoveel dingen geleerd en daarom zit ik hier.<br><br>
+            Ik probeer altijd mijn best omdat ik weet dat ik maar een kans heb op aarde om iets te doen en elke dag dat
+            ik niks doe is een dag minder om dingen te doen.
+        </p> <!-- schrijf meer text -->
+
+    </section>
+
+    <section class="section64" id="section64">
+        <p>**** COMMODORE 64 BASIC V2 **** <BR> 64K RAM SYSTEM 388911 BASIC BYTES FREE <BR> READY.<BR>LOAD ,8,1<br>
+            LOADED<br> READY<br>#<br>ik heb een kleine interesse in oude machines en hoe ze werken</p>
+    </section>
+</body>
+<footer>
+    <a href="mailto:florianrasing@gmail.com">Send me an email</a>
+    <a href="tel: +31 06 15286448">Call me (dont)</a>
+</footer>
+
+</html>

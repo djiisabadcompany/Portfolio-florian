@@ -1,130 +1,414 @@
-{
-        background-color: #ff2800;
-        padding: 10px;
-    }
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #ff2800;
+    background-image: linear-gradient(to bottom, red, black);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-    body {
-        background-color: rgb(11, 11, 11);
-    }
+.B1 {
+    background-image: linear-gradient(to bottom, #6e92ff, black);
+}
 
-    a {
-        text-decoration: none;
-    }
+html:hover {
+    background-image: url("ymage/temp_1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 
-    nav {
-        background-color: #ff2800;
-        padding: 20px;
-    }
+html {
+    font-size: 10px;
+}
 
-    nav a {
-        color: rgb(11, 11, 11);
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        font-size: 350%;
-        padding: 50;
-        margin: 10px;
-        background-color: #ff2800;
-        display: inline-block padding: 8px 10px;
-        border: 3px solid white;
-        border-radius: 15px;
-        text-decoration: none;
-        color: black;
-    }
+a {
+    text-decoration: none;
+}
 
-    section {
-        margin: 10px;
-        background-color: #ff2800;
-        display: inline-block;
-        padding: 20px 22px;
-        border: 4px solid white;
-        border-radius: 20px;
-        text-decoration: none;
-        color: black;
-        width: auto;
-        height: auto;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        font-size: 25px;
-    }
 
-    #section1 {
-        margin: 10px 0 10px auto;
-        background-color: #ff2800;
-        display: block;
-        width: fit-content;
-        padding: 20px 22px;
-        border: 4px solid white;
-        border-radius: 20px;
-        color: black;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        font-size: 25px;
-    }
+nav a:hover {
+    color: rgb(16, 34, 139);
+    font-family: "Sixtyfour", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 4rem;
+    padding: 50;
+    margin: 1rem;
+    background-color: #6e92ff;
+    display: inline-block padding: 0.8rem 1rem;
+    border: 0.3rem solid #A7D1E5;
+    border-radius: 1.5rem;
+    text-decoration: none;
+    color: white;
+}
 
-    #section2 {
-        margin: auto;
-        background-color: #ff2800;
-        display: flex;
-        width: auto;
-        padding: 20px 22px;
-        border: 4px solid white;
-        border-radius: 20px;
-        color: black;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        font-size: 25px;
-        text-align: left;
+body {
+    cursor: url("wrench.png") 4 4, auto;
+}
 
-    }
+a {
+    cursor: url("wrench.png") 4 4, pointer;
+}
 
-    body {
-        margin: 0;
-        background: black;
-    }
+.click {
+    background-color: #008dde;
+    color: #eef9fe
+}
 
-    .img1 {
-        width: 94vw;
-        height: auto;
-        max-height: 90vh;
-        object-fit: contain;
-        display: block;
-        margin: auto;
-    }
+.faster-one-regular {
+    font-family: "Faster One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
 
-    #slideshowImage {
-        width: 94vw;
-        height: auto;
-        max-height: 90vh;
-        object-fit: contain;
-        display: block;
-        margin: auto;
-    }
+.audiowide-regular {
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 
-    #div1 {
-        margin: 10px;
-        background-color: #ff2800;
-        display: inline-block;
-        padding: 20px 22px;
-        border: 4px solid white;
-        border-radius: 20px;
-        text-decoration: none;
-        color: rgb(0, 0, 0);
-        width: auto;
-        height: auto;
-        font-family: 'Arial Narrow Bold', sans-serif;
-        font-size: 25px;
-    }
+.sixtyfour {
+    font-family: "Sixtyfour", sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+}
 
-    .right-align {
-        text-align: right;
-    }
+.A1 {
+    font-family: "Sixtyfour", sans-serif;
+    text-transform: uppercase;
+}
 
-    .box-container {
-        display: flex;
-        align-items: flex-start;
-        gap: 20px;
-    }
+nav img {
+    max-width: 100%;
+    margin-left: auto;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 0.3rem solid white;
+    display: flex;
+}
 
-    .banner {
-        width: 100%;
-        max-width: 3440px;
-        height: auto;
-        aspect-ratio: 3440 / 1440;
-        object-fit: cover;
-    }
+nav h1 {
+    display: flex;
+    font-size: 600%;
+    align-self: left;
+    border: 0;
+    margin: 0;
+    position: relative;
+}
+
+nav {
+    padding: 2rem;
+    font-family: "Faster One", system-ui;
+    color: rgb(11, 11, 11);
+    background-color: transparent;
+}
+
+nav p {
+    font-size: 4rem;
+    font-family: "Audiowide";
+}
+
+
+nav a .A1 {
+    color: #008dde;
+    font-family: "Sixtyfour", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: 4rem;
+    padding: 0.8rem 1rem;
+    margin: 1rem;
+    background-color: #A7D1E5;
+    display: inline-block;
+    border: 0.3rem solid #ffffff;
+    border-radius: 1.5rem;
+    text-decoration: none;
+}
+
+nav a {
+    color: #000000;
+    font-family: "Sixtyfour", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: 4rem;
+    padding: 0.8rem 1rem;
+    margin: 1rem;
+    background-color: #ff2800;
+    display: inline-block;
+    border: 0.3rem solid #ffffff;
+    border-radius: 1.5rem;
+    text-decoration: none;
+}
+
+section {
+    margin: 1rem;
+    background-color: #ff2800;
+    display: inline-block;
+    padding: 2rem 2.2rem;
+    border: 0.4rem solid white;
+    border-radius: 2rem;
+    text-decoration: none;
+    color: black;
+    width: auto;
+    height: auto;
+    font-family: "Audiowide", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2.5rem;
+}
+
+#section1 {
+    margin: 1rem 0rem 1rem, auto;
+    background-color: #ff2800;
+    display: block;
+    width: fit-content;
+    padding: 2rem 2.2rem;
+    border: 0.4rem solid white;
+    border-radius: 2rem;
+    color: black;
+    font-family: "Audiowide", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2.5rem;
+}
+
+#section2 {
+    margin: auto;
+    background-color: #ff2800;
+    display: flex;
+    width: auto;
+    padding: 2rem 2.2rem;
+    border: 0.4rem solid white;
+    border-radius: 2rem;
+    color: black;
+    font-family: "Audiowide", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2.5rem;
+    text-align: left;
+
+}
+
+#section3 {
+    margin: auto;
+    background-color: #ff2800;
+    display: flex;
+    width: auto;
+    padding: 2rem 2.2rem;
+    border: 0.4rem solid white;
+    border-radius: 2rem;
+    color: black;
+    font-family: "Audiowide", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2.5rem;
+    text-align: left;
+
+}
+
+#section4 {
+    margin: auto;
+    display: flex;
+    padding: 2rem 2.2rem;
+    border: 0.4rem solid white;
+    border-radius: 2rem;
+    font-family: "Audiowide", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2.5rem;
+    text-align: left;
+    object-fit: cover;
+
+}
+
+#section5 {
+    margin: auto;
+    background-color: #3aebff;
+    display: flex;
+    width: auto;
+    padding: 2rem 2.2rem;
+    border: 0.4rem solid white;
+    border-radius: 2rem;
+    color: black;
+    font-family: "Audiowide", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2.5rem;
+    text-align: left;
+
+}
+
+#section64 {
+    text margin: auto;
+    display: flex;
+    padding: 2rem 2.2rem;
+    border-radius: 2rem;
+    color: #A7D1E5;
+    background-color: #6e92ff;
+    font-family: "Sixtyfour", Impact;
+    font-size: 2.5rem;
+    text-align: left;
+    object-fit: cover;
+    height: auto;
+    width: auto;
+}
+
+#section65 {
+    text margin: auto;
+    display: flex;
+    padding: 2rem 2.2rem;
+    border-radius: 2rem;
+    color: #A7D1E5;
+    background-color: #6e92ff;
+    font-family: "Sixtyfour", Impact;
+    font-size: 2.5rem;
+    text-align: left;
+    object-fit: cover;
+    height: auto;
+    width: auto;
+}
+
+.img1 {
+    width: 94vw;
+    height: auto;
+    max-height: 90vh;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+}
+
+#slideshowImage {
+    width: 94vw;
+    height: auto;
+    object-fit: contain;
+    display: block, flex;
+    margin: auto;
+}
+
+#div1 {
+    margin: 1rem;
+    background-color: #ff2800;
+    display: inline-block;
+    padding: 2rem 2.2rem;
+    border: 0.4rem solid white;
+    border-radius: 2rem;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    width: auto;
+    height: auto;
+    font-family: "Audiowide", 'Arial Narrow Bold', sans-serif;
+    font-size: 2.5rem;
+}
+
+#div2 {
+    margin: 1rem;
+    background-color: #6e92ff;
+    display: inline-block;
+    padding: 2rem 2.2rem;
+    border: 0.4rem solid white;
+    border-radius: 2rem;
+    text-decoration: none;
+    color: rgb(101, 52, 64);
+    width: auto;
+    height: auto;
+    font-family: "Audiowide", 'Arial Narrow Bold', sans-serif;
+    font-size: 2.5rem;
+}
+
+.right-align {
+    text-align: right;
+}
+
+.box-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.banner {
+    width: 100%;
+    max-width: 344rem;
+    height: auto;
+    aspect-ratio: 3440 / 1440;
+    object-fit: cover;
+    position: relative;
+}
+
+.logo {
+    display: block;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+footer {
+    background-color: #000000;
+    padding: 2rem;
+}
+
+footer a {
+    color: rgb(11, 11, 11);
+    font-family: "Audiowide", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 350%;
+    padding: 50;
+    margin: 1rem;
+    background-color: #ffffff;
+    display: inline-block padding: 0.8rem 1rem;
+    border: 0.3rem solid white;
+    border-radius: 1.5rem;
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover {
+    color: rgb(213, 13, 13);
+    font-family: "Audiowide", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 350%;
+    padding: 50;
+    margin: 1rem;
+    background-color: #ff0000;
+    display: inline-block padding: 0.8rem 1rem;
+    border: 0.3rem solid black;
+    border-radius: 1.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+.container {
+    padding: 2rem;
+}
+
+.slider-wrapper {
+    position: relative;
+    max-width: 145rem;
+    margin: 0 auto;
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: auto;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0, 0, 0.25);
+    border-radius: 0.5rem;
+    scrollbar-width: none;
+}
+
+.slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.slider-nav a {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+
+.pointer {
+    cursor: url(wrenchT.png), auto;
+}
+
+.slider-nav a:hover {
+    opacity: 1;
+    cursor: url(wrenchT.png);
+}

@@ -1,0 +1,36 @@
+from pathlib import Path
+import shutil
+import re
+
+source_folder = Path("images")
+
+classes = {
+    "class_A": (1, 120),
+    "class_B": (121, 280),
+    "class_C": (281, 400),
+    "class_D": (401, 530),
+}
+
+# Create class folders
+for class_name in classes:
+    (source_folder / class_name).mkdir(exist_ok=True)
+
+# Match filenames such as image-430.jpg, image-430.png, etc.
+pattern = re.compile(r"image-(\d+)", re.IGNORECASE)
+
+for image_file in source_folder.iterdir():
+    if not image_file.is_file():
+        continue
+
+    match = pattern.search(image_file.stem)
+    if not match:
+        continue
+
+    image_number = int(match.group(1))
+
+    for class_name, (start, end) in classes.items():
+        if start <= image_number <= end:
+            destination = source_folder / class_name / image_file.name
+            shutil.move(str(image_file), str(destination))
+            print(f"{image_file.name} -> {class_name}")
+            break
