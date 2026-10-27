@@ -1,414 +1,295 @@
-body {
-    margin: 0;
-    min-height: 100vh;
-    background-color: #ff2800;
-    background-image: linear-gradient(to bottom, red, black);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+/* FIRST. the start */
+:root {
+    --main-color: #1E1E1E;
+    --secondary-color: #FDFDFD;
+    --main-font: "acre", sans-serif;
+    --third-color: #FDFDFD;
+    --main-font-size: 2rem;
+    --secondary-font-size: 3rem;
+    --third-font-size: 4.5rem;
+    --fourth-font-size: 3.7rem;
+    --main-margin: 0;
+    --secondary-margin: 0.5;
+    --main-display: inline-block;
+    --secondary-display: grid;
+    --main-flex-direction: row;
+    --main-background-color: #FDFDFD;
+    --main-letter-spacing: 2rem;
+    --secondary-letter-spacing: 0.3rem;
+    --main-text-decoration: none;
 }
 
-.B1 {
-    background-image: linear-gradient(to bottom, #6e92ff, black);
-}
-
-html:hover {
-    background-image: url("ymage/temp_1.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
+/* defines everything which i use alot. makes for easy code editing */
 html {
     font-size: 10px;
 }
 
-a {
-    text-decoration: none;
-}
-
-
-nav a:hover {
-    color: rgb(16, 34, 139);
-    font-family: "Sixtyfour", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 4rem;
-    padding: 50;
-    margin: 1rem;
-    background-color: #6e92ff;
-    display: inline-block padding: 0.8rem 1rem;
-    border: 0.3rem solid #A7D1E5;
-    border-radius: 1.5rem;
-    text-decoration: none;
-    color: white;
-}
-
+/* sets default font size */
 body {
-    cursor: url("wrench.png") 4 4, auto;
+    margin: var(--main-margin);
+    background-color: var(--main-background-color);
 }
 
+/* sets up the body */
+@font-face {
+    font-family: 'acre';
+    src: url('Acre.woff2') format('woff2');
+}
+
+/* defines font locally for faster loading and offline use*/
+.acre {
+    font-family: "Acre", sans-serif;
+}
+
+/* defines font */
+li {
+    list-style: none;
+}
+
+/* sets no list style on li */
+.container {
+    display: flex;
+}
+
+/* sets container to flex */
+.content-box {
+    width: 114.452rem;
+    text-align: center;
+}
+
+/* im not sure if its good code but without this defined the paragraph is smaller then i want it to plus wont center. it works for all screen sizes so it should be fine */
+/* also aligns text to center */
+
+/* SECOND. the buttons and inputs */
+
+/* puts everything into a flex container */
 a {
-    cursor: url("wrench.png") 4 4, pointer;
+    text-decoration: var(--main-text-decoration);
+    color: var(--secondary-color);
+    display: var(--main-display);
+    margin: var(--secondary-margin);
+    transform: translateX(-4rem);
+    font-family: var(--main-font);
 }
 
-.click {
-    background-color: #008dde;
-    color: #eef9fe
+/* defines a to be easily recogniseable against the background and easy to use while staying in the style of the site */
+a:hover {
+    margin: calc(var(--secondary-margin) - 0.5rem);
+    font-size: calc(var(--secondary-font-size) + 0.5rem);
 }
 
-.faster-one-regular {
-    font-family: "Faster One", system-ui;
-    font-weight: 400;
-    font-style: normal;
+/* upon hovering the A grows so the website is easier to use and responsive */
+.clicked {
+    margin: calc(var(--secondary-margin) - 0.5rem);
+    font-size: calc(var(--secondary-font-size) + 0.5rem);
+    cursor: pointer;
 }
 
-.audiowide-regular {
-    font-family: "Audiowide", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+input {
+    transform: translateX(-3.5rem);
+    margin: 2rem;
+    padding: 1rem;
+    font-family: var(--main-font);
+    color: var(--main-color);
+    letter-spacing: var(--secondary-letter-spacing);
 }
 
-.sixtyfour {
-    font-family: "Sixtyfour", sans-serif;
-    text-transform: uppercase;
-    font-weight: 400;
+/* sets up the input to be in the right spot and look good */
+select {
+    transform: translateX(-3.5rem);
+    margin: 3rem;
+    padding: 1rem;
+    font-family: var(--main-font);
+    color: var(--main-color);
+    letter-spacing: var(--secondary-letter-spacing);
 }
 
-.A1 {
-    font-family: "Sixtyfour", sans-serif;
-    text-transform: uppercase;
-}
+/* sets up the select to be in the right spot and look good */
 
-nav img {
-    max-width: 100%;
-    margin-left: auto;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 0.3rem solid white;
-    display: flex;
-}
-
-nav h1 {
-    display: flex;
-    font-size: 600%;
-    align-self: left;
+button {
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    font-size: var(--secondary-font-size);
     border: 0;
     margin: 0;
-    position: relative;
+    padding: 0;
+    letter-spacing: var(--main-letter-spacing);
 }
+
+/* sets the buttons up. only used in NAV */
+
+/* THIRD. the nav */
+
+/* clicked uses calc to change the margin and font size so the list doesnt jump around but still looks good and responsive */
+header {
+    width: 35rem;
+    flex-shrink: 0;
+    background-color: var(--main-color);
+}
+
+/* header just defines the basic size of the nav on the left */
 
 nav {
+    position: sticky;
+    overflow: hidden;
+    top: 0;
+    margin-bottom: 100vh;
+    flex: 35;
+    height: 100vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    font-size: var(--secondary-font-size);
+    display: flex;
+    flex-direction: column;
     padding: 2rem;
-    font-family: "Faster One", system-ui;
-    color: rgb(11, 11, 11);
-    background-color: transparent;
+    letter-spacing: var(--main-letter-spacing);
 }
 
-nav p {
-    font-size: 4rem;
-    font-family: "Audiowide";
+/* nav sets the navbar up to be a columnn that is always fully black on the left no matter what even while scrolling */
+h1 {
+    color: var(--secondary-color);
+    font-family: var(--main-font);
+    font-size: var(--third-font-size);
+}
+
+/* h1 sets up h1. simple */
+h2 {
+    color: var(--main-color);
+    font-family: var(--main-font);
+    font-size: var(--third-font-size);
+}
+
+/* h2 sets up h2, simpler */
+h3 {
+    color: var(--main-color);
+    font-family: var(--main-font);
+    font-size: var(--fourth-font-size);
+}
+
+/* h3 sets up h3, simplest */
+
+
+
+/* FOURTH. the tabel and grid */
+/* sets up the button to be in the right spot and look good */
+.tabeltop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+/* sets up the tabeltop to be a grid */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: stretch;
+}
+
+/* even more grid stuff */
+.tabel {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+    font-size: var(--secondary-font-size);
+    color: var(--main-color);
+    letter-spacing: var(--secondary-letter-spacing);
 }
 
 
-nav a .A1 {
-    color: #008dde;
-    font-family: "Sixtyfour", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-    font-size: 4rem;
-    padding: 0.8rem 1rem;
-    margin: 1rem;
-    background-color: #A7D1E5;
-    display: inline-block;
-    border: 0.3rem solid #ffffff;
-    border-radius: 1.5rem;
-    text-decoration: none;
+
+/* FIFTH, the images and such */
+/* makes a tabel which is the box the tabel is in */
+.divimg {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-color);
+    border-radius: 1rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    color: var(--secondary-color);
 }
 
-nav a {
-    color: #000000;
-    font-family: "Sixtyfour", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-    font-size: 4rem;
-    padding: 0.8rem 1rem;
-    margin: 1rem;
-    background-color: #ff2800;
-    display: inline-block;
-    border: 0.3rem solid #ffffff;
-    border-radius: 1.5rem;
-    text-decoration: none;
-}
-
-section {
-    margin: 1rem;
-    background-color: #ff2800;
-    display: inline-block;
-    padding: 2rem 2.2rem;
-    border: 0.4rem solid white;
-    border-radius: 2rem;
-    text-decoration: none;
-    color: black;
-    width: auto;
-    height: auto;
-    font-family: "Audiowide", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 2.5rem;
-}
-
-#section1 {
-    margin: 1rem 0rem 1rem, auto;
-    background-color: #ff2800;
+/* sets up images in a div. important for them to fit */
+.divimg img,
+.divimg video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
     display: block;
-    width: fit-content;
-    padding: 2rem 2.2rem;
-    border: 0.4rem solid white;
-    border-radius: 2rem;
-    color: black;
-    font-family: "Audiowide", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 2.5rem;
 }
 
-#section2 {
-    margin: auto;
-    background-color: #ff2800;
+/* makes img and vid fit in a box */
+.content-area {
+    flex: 1;
     display: flex;
-    width: auto;
-    padding: 2rem 2.2rem;
-    border: 0.4rem solid white;
-    border-radius: 2rem;
-    color: black;
-    font-family: "Audiowide", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 2.5rem;
-    text-align: left;
-
-}
-
-#section3 {
-    margin: auto;
-    background-color: #ff2800;
-    display: flex;
-    width: auto;
-    padding: 2rem 2.2rem;
-    border: 0.4rem solid white;
-    border-radius: 2rem;
-    color: black;
-    font-family: "Audiowide", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 2.5rem;
-    text-align: left;
-
-}
-
-#section4 {
-    margin: auto;
-    display: flex;
-    padding: 2rem 2.2rem;
-    border: 0.4rem solid white;
-    border-radius: 2rem;
-    font-family: "Audiowide", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 2.5rem;
-    text-align: left;
-    object-fit: cover;
-
-}
-
-#section5 {
-    margin: auto;
-    background-color: #3aebff;
-    display: flex;
-    width: auto;
-    padding: 2rem 2.2rem;
-    border: 0.4rem solid white;
-    border-radius: 2rem;
-    color: black;
-    font-family: "Audiowide", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 2.5rem;
-    text-align: left;
-
-}
-
-#section64 {
-    text margin: auto;
-    display: flex;
-    padding: 2rem 2.2rem;
-    border-radius: 2rem;
-    color: #A7D1E5;
-    background-color: #6e92ff;
-    font-family: "Sixtyfour", Impact;
-    font-size: 2.5rem;
-    text-align: left;
-    object-fit: cover;
-    height: auto;
-    width: auto;
-}
-
-#section65 {
-    text margin: auto;
-    display: flex;
-    padding: 2rem 2.2rem;
-    border-radius: 2rem;
-    color: #A7D1E5;
-    background-color: #6e92ff;
-    font-family: "Sixtyfour", Impact;
-    font-size: 2.5rem;
-    text-align: left;
-    object-fit: cover;
-    height: auto;
-    width: auto;
-}
-
-.img1 {
-    width: 94vw;
-    height: auto;
-    max-height: 90vh;
-    object-fit: contain;
-    display: block;
-    margin: auto;
-}
-
-#slideshowImage {
-    width: 94vw;
-    height: auto;
-    object-fit: contain;
-    display: block, flex;
-    margin: auto;
-}
-
-#div1 {
-    margin: 1rem;
-    background-color: #ff2800;
-    display: inline-block;
-    padding: 2rem 2.2rem;
-    border: 0.4rem solid white;
-    border-radius: 2rem;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    width: auto;
-    height: auto;
-    font-family: "Audiowide", 'Arial Narrow Bold', sans-serif;
-    font-size: 2.5rem;
-}
-
-#div2 {
-    margin: 1rem;
-    background-color: #6e92ff;
-    display: inline-block;
-    padding: 2rem 2.2rem;
-    border: 0.4rem solid white;
-    border-radius: 2rem;
-    text-decoration: none;
-    color: rgb(101, 52, 64);
-    width: auto;
-    height: auto;
-    font-family: "Audiowide", 'Arial Narrow Bold', sans-serif;
-    font-size: 2.5rem;
-}
-
-.right-align {
-    text-align: right;
-}
-
-.box-container {
-    display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    padding: 2rem;
+    box-sizing: border-box;
     gap: 2rem;
 }
 
-.banner {
-    width: 100%;
-    max-width: 344rem;
-    height: auto;
-    aspect-ratio: 3440 / 1440;
-    object-fit: cover;
-    position: relative;
-}
 
-.logo {
-    display: block;
-    justify-content: center;
-    align-items: flex-start;
 
-}
 
-footer {
-    background-color: #000000;
-    padding: 2rem;
-}
+/* SIXTH all paragraph stuff is here */
+/* is the area where stuff is */
 
-footer a {
-    color: rgb(11, 11, 11);
-    font-family: "Audiowide", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 350%;
-    padding: 50;
-    margin: 1rem;
-    background-color: #ffffff;
-    display: inline-block padding: 0.8rem 1rem;
-    border: 0.3rem solid white;
-    border-radius: 1.5rem;
-    text-decoration: none;
-    color: black;
-}
-
-footer a:hover {
-    color: rgb(213, 13, 13);
-    font-family: "Audiowide", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 350%;
-    padding: 50;
-    margin: 1rem;
-    background-color: #ff0000;
-    display: inline-block padding: 0.8rem 1rem;
-    border: 0.3rem solid black;
-    border-radius: 1.5rem;
-    text-decoration: none;
-    color: white;
-}
-
-.container {
-    padding: 2rem;
-}
-
-.slider-wrapper {
-    position: relative;
-    max-width: 145rem;
-    margin: 0 auto;
-}
-
-.slider {
+.paratainer {
     display: flex;
-    aspect-ratio: auto;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0, 0, 0.25);
-    border-radius: 0.5rem;
-    scrollbar-width: none;
+    flex: 10;
 }
 
-.slider img {
-    flex: 1 0 100%;
-    scroll-snap-align: start;
-    object-fit: cover;
+/* defines the max flex of the interview paragraph */
+.paragraphinter {
+    font-family: var(--main-font);
+    font-size: var(--secondary-font-size);
+    color: var(--main-color);
+    background-color: var(--third-color);
+    letter-spacing: var(--secondary-letter-spacing);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    flex: 5;
 }
 
-.slider-nav {
+/* sets up the normal non classed text on the left */
+.R {
+    text-align: right;
     display: flex;
-    column-gap: 1rem;
-    position: absolute;
-    bottom: 1.25rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
+    flex: 5;
+    justify-content: end;
+
 }
 
-.slider-nav a {
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50;
-    background-color: #fff;
-    opacity: 0.75;
-    transition: opacity ease 250ms;
+/* puts the classed R text on the right */
+.paragraph {
+    font-family: var(--main-font);
+    font-size: var(--secondary-font-size);
+    color: var(--main-color);
+    background-color: var(--third-color);
+    letter-spacing: var(--secondary-letter-spacing);
+    flex: 65;
+    padding: 1rem 2rem;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
 }
 
-.pointer {
-    cursor: url(wrenchT.png), auto;
+/* defines the paragraph */
+.paragraph a {
+    color: var(--main-color);
+    margin: 2rem;
 }
 
-.slider-nav a:hover {
-    opacity: 1;
-    cursor: url(wrenchT.png);
-}
+/* paragraph buttons */
