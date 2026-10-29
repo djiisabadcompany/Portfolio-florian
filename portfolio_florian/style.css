@@ -82,6 +82,7 @@ a:hover {
 .clicked {
     margin: calc(var(--secondary-margin) - 0.5rem);
     font-size: calc(var(--secondary-font-size) + 0.5rem);
+    letter-spacing: var(--secondary-letter-spacing);
     cursor: pointer;
 }
 
@@ -199,7 +200,7 @@ h3 {
     box-sizing: border-box;
     font-family: var(--main-font);
     font-size: var(--secondary-font-size);
-    color: var(--main-color);
+    color: var(--main-color);   
     letter-spacing: var(--secondary-letter-spacing);
 }
 
@@ -293,3 +294,89 @@ h3 {
 }
 
 /* paragraph buttons */
+
+@media (max-width: 764px) {
+    nav {
+        overflow: hidden;
+        top: 0;
+        margin-bottom: 0vh;
+        height: 24rem;
+        background-color: var(--main-color);
+        color: var(--secondary-color);
+        font-size: var(--secondary-font-size);
+        display: flex;
+        flex-direction: row;
+        padding: 1rem;
+        letter-spacing: var(--main-letter-spacing);
+    }
+
+    header {
+        width: auto;
+        background-color: var(--main-color);
+    }
+
+    .paragraph {
+        font-family: var(--main-font);
+        font-size: var(--secondary-font-size);
+        color: var(--main-color);
+        background-color: var(--third-color);
+        letter-spacing: var(--secondary-letter-spacing);
+        padding: 1rem 2rem;
+        align-items: center;
+        display: flex;
+    }
+
+    .content-box {
+        width: auto;
+        text-align: center;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 625px) {
+    nav {
+        overflow: hidden;
+        top: 0;
+        margin-bottom: 0vh;
+        height: 24rem;
+        background-color: var(--main-color);
+        color: var(--secondary-color);
+        font-size: var(--secondary-font-size);
+        display: flex;
+        flex-direction: row;
+        padding: 1rem;
+        letter-spacing: var(--secondary-letter-spacing);
+    }
+
+    header {
+        width: auto;
+        background-color: var(--main-color);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .paragraph {
+        font-family: var(--main-font);
+        font-size: var(--secondary-font-size);
+        color: var(--main-color);
+        background-color: var(--third-color);
+        letter-spacing: var(--secondary-letter-spacing);
+        padding: 1rem 2rem;
+        align-items: center;
+        display: flex;
+    }
+
+    .content-box {
+        width: auto;
+        text-align: center;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+}
